@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Gen Z Ka Dukan — everyday fashion, streetwear and essentials.">
+  <title>Gen Z Ka Dukan | Wear Your Vibe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">FRESH DROPS. FRESH ENERGY. <span>COD AVAILABLE ACROSS SERVICEABLE PIN CODES</span></div>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-mark">GZ</span><span>GEN Z <b>KA DUKAN</b><small>WEAR YOUR VIBE.</small></span></a>
+    <nav class="desktop-nav"><a href="#shop">Shop all</a><a href="#shop" data-nav="Men">Men</a><a href="#shop" data-nav="Women">Women</a><a href="#shop" data-nav="Accessories">Accessories</a></nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button>
+      <button class="icon-btn" id="accountToggle">ACCOUNT</button>
+      <button class="icon-btn bag-btn" id="loginTop">LOGIN</button>
+      <button class="menu-btn" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+  <div class="search-bar" id="searchBar"><input id="searchInput" type="search" placeholder="Search tees, shirts, sneakers..."><button id="searchClose">✕</button></div>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE NEW DROP / 2026</p>
+        <h1>YOUR STYLE.<br><em>YOUR RULES.</em></h1>
+        <p class="hero-desc">Fits that speak before you do. Discover everyday essentials made for your kind of energy.</p>
+        <a class="primary-btn" href="#shop">SHOP THE DROP <span>↗</span></a>
+        <div class="hero-note"><span class="note-line"></span> NO RULES. JUST REAL STYLE.</div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=85" alt="Streetwear fashion editorial">
+        <div class="hero-sticker">NEW<br>SEASON<br><b>’26</b></div><div class="vertical-label">GEN Z APPROVED — EST. 2026</div>
+      </div>
+    </section>
+    <section class="ticker"><div>FIND YOUR FIT ✳ OWN YOUR LOOK ✳ MAKE IT YOURS ✳ FIND YOUR FIT ✳ OWN YOUR LOOK ✳</div></section>
+    <section class="shop-section" id="shop">
+      <div class="section-heading"><div><p class="eyebrow">CURATED FOR YOUR EVERYDAY</p><h2>THE GOOD <em>STUFF.</em></h2></div><p class="muted">Fresh fits. Easy prices. Zero effort.</p></div>
+      <div class="shop-toolbar"><div class="filters" id="filters"><button class="filter active" data-category="All">All pieces</button><button class="filter" data-category="Men">Men</button><button class="filter" data-category="Women">Women</button><button class="filter" data-category="Accessories">Accessories</button></div><select id="sortSelect"><option value="featured">Sort: Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option></select></div>
+      <div class="product-grid" id="productGrid"></div><div class="empty-state" id="emptyState" hidden>No products found. Try another search.</div>
+    </section>
+    <section class="manifesto"><div class="manifesto-top">NOT HERE TO FIT IN.</div><h2>MADE FOR THE<br><em>MAIN CHARACTER.</em></h2><p>Style is personal. Your wardrobe should be too. Pick what feels like you and make every day your runway.</p><a href="#shop" class="text-link">FIND YOUR NEXT FIT ↗</a><span class="manifesto-star">✳</span></section>
+    <section class="perks"><article><span>↗</span><h3>STYLE THAT HITS</h3><p>Everyday looks, standout energy.</p></article><article><span>＋</span><h3>CASH ON DELIVERY</h3><p>Pay when your order reaches you.</p></article><article><span>♡</span><h3>MADE FOR YOU</h3><p>Find your fit, choose your colour.</p></article></section>
+  </main>
+  <footer><div class="footer-main"><div class="footer-brand"><a class="brand light" href="#"><span class="brand-mark">GZ</span><span>GEN Z <b>KA DUKAN</b><small>WEAR YOUR VIBE.</small></span></a><p>Good fits. Good energy. Your kind of store.</p></div><div><h4>EXPLORE</h4><a href="#shop">Shop all</a><a href="#shop" data-footer-nav="Men">Men</a><a href="#shop" data-footer-nav="Women">Women</a></div><div><h4>HELP</h4><a href="mailto:hello@genzkadukan.com">Contact</a><a href="#policies">Shipping & returns</a><a href="#policies">Privacy policy</a></div><div class="footer-social"><h4>STAY IN THE LOOP</h4><p>New drops. Fresh updates.</p><a href="#shop">FOLLOW THE DROP ↗</a></div></div><div class="footer-bottom" id="policies"><span>© 2026 GEN Z KA DUKAN</span><span>MADE FOR YOUR VIBE.</span></div></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <section class="modal" id="authModal" aria-label="Customer account">
+    <button class="modal-close" data-close>✕</button><p class="eyebrow">GEN Z KA DUKAN</p><h2 id="authTitle">WELCOME BACK.</h2>
+    <div class="tabs"><button class="tab active" data-auth="login">Login</button><button class="tab" data-auth="register">Create account</button></div>
+    <form id="authForm"><label>Mobile number</label><input id="authPhone" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number" required><label>Password</label><input id="authPassword" type="password" minlength="6" placeholder="Minimum 6 characters" required><div id="confirmWrap" hidden><label>Confirm password</label><input id="authConfirm" type="password" minlength="6" placeholder="Re-enter password"></div><button class="checkout-btn" type="submit" id="authSubmit">LOGIN</button></form>
+    <p class="fineprint">No OTP. Your password is securely handled by the authentication service.</p>
+  </section>
+
+  <section class="modal wide" id="checkoutModal" aria-label="COD checkout">
+    <button class="modal-close" data-close>✕</button><p class="eyebrow">ALMOST YOURS</p><h2>CHECKOUT.</h2><div id="checkoutProduct" class="checkout-product"></div>
+    <form id="checkoutForm" class="checkout-form">
+      <div class="form-grid"><div><label>Full name</label><input id="buyerName" required placeholder="Your name"></div><div><label>Mobile number</label><input id="buyerPhone" required maxlength="10" inputmode="numeric" placeholder="10-digit mobile"></div></div>
+      <label>PIN code</label><input id="pinCode" required maxlength="6" inputmode="numeric" placeholder="Enter 6-digit PIN code">
+      <div class="form-grid"><div><label>State</label><input id="state" readonly required placeholder="Auto-filled from PIN"></div><div><label>District</label><input id="district" readonly required placeholder="Auto-filled from PIN"></div></div>
+      <label>City / Post Office</label><input id="city" readonly required placeholder="Auto-filled from PIN">
+      <label>House no., street, area and landmark</label><textarea id="address" required rows="3" placeholder="Enter complete delivery address"></textarea>
+      <div class="form-grid"><div><label>Choose size</label><select id="sizeSelect" required></select></div><div><label>Choose colour</label><select id="colourSelect" required></select></div></div>
+      <div class="cod-note">✓ CASH ON DELIVERY ONLY — Pay cash when delivered.</div>
+      <button class="checkout-btn" type="submit">CONFIRM COD ORDER ↗</button>
+    </form>
+  </section>
+
+  <section class="modal admin-modal" id="adminModal" aria-label="Admin panel">
+    <button class="modal-close" data-close>✕</button><p class="eyebrow">OWNER ACCESS ONLY</p><h2>ADMIN PANEL.</h2>
+    <div id="adminLogin"><p class="muted">Sign in with the owner account configured in Supabase.</p><button class="checkout-btn" id="adminSignIn">ADMIN LOGIN</button></div>
+    <div id="adminContent" hidden>
+      <div class="admin-tabs"><button class="tab active" data-admin="products">Products</button><button class="tab" data-admin="orders">Orders</button></div>
+      <div id="adminProducts">
+        <h3>Add / edit product</h3><form id="productForm"><input id="productId" type="hidden"><label>Product name</label><input id="productName" required><div class="form-grid"><div><label>Price (₹)</label><input id="productPrice" type="number" min="1" required></div><div><label>Category</label><select id="productCategory"><option>Men</option><option>Women</option><option>Accessories</option></select></div></div><label>Description</label><textarea id="productDescription" rows="2"></textarea><label>Product photos (upload files)</label><input id="productPhotos" type="file" accept="image/*" multiple><label>Size + colour stock (one row per combination)</label><div id="variantRows"></div><button type="button" class="secondary-btn" id="addVariant">+ Add size / colour</button><button class="checkout-btn" type="submit">SAVE PRODUCT</button></form><h3>Live products</h3><div id="adminProductList"></div>
+      </div>
+      <div id="adminOrders" hidden><h3>Customer orders</h3><div id="adminOrderList"></div></div>
+      <button class="secondary-btn" id="adminLogout">LOG OUT</button>
+    </div>
+  </section>
+  <button class="admin-shortcut" id="adminShortcut" title="Admin access">⚙</button>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script>
+</body></html>
